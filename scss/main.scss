@@ -1,4 +1,5 @@
 @import "config";
+@import "menu";
 
 * {
   box-sizing: border-box;
@@ -19,7 +20,7 @@ h1,
 h2,
 h3 {
   margin: 0;
-  font-weight: 400;
+  font-weight: 300;
 
   // &: classes that are attacked to h1, h2 and h3
   &.lg-heading {
