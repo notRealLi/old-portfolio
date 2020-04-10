@@ -2,7 +2,7 @@ const menu = document.querySelector(".menu");
 const menuButton = document.querySelector(".menu-button");
 const menuProfile = document.querySelector(".menu-profile");
 const menuNav = document.querySelector(".menu-nav");
-const navItems = document.querySelectorAll(".nav-items");
+const navItems = document.querySelectorAll(".nav-item");
 
 // initial state of menu
 let showMenu = false;
