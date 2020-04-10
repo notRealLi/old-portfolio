@@ -88,7 +88,7 @@
       height: 250px;
       background: url("../img/Li.jpg");
       opacity: 1; // this can overwrites parent opacity only coz parent uses rgba instead of opacity
-      background-size: 250px 250px;
+      background-size: cover;
       border-radius: 50%;
       border: solid 3px $secondary-color;
     }
@@ -114,7 +114,7 @@
     font-size: 30px;
     text-transform: uppercase;
     padding: 1rem 0;
-    font-weight: 400;
+    font-weight: 300;
     color: #fff;
     text-decoration: none;
     @include easeOut();

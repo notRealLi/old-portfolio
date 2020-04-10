@@ -56,7 +56,7 @@
       height: 250px;
       background: url("../img/Li.jpg");
       opacity: 1;
-      background-size: 250px 250px;
+      background-size: cover;
       border-radius: 50%;
       border: solid 3px #eece1a; }
   .menu .nav-item {
@@ -72,7 +72,7 @@
     font-size: 30px;
     text-transform: uppercase;
     padding: 1rem 0;
-    font-weight: 400;
+    font-weight: 300;
     color: #fff;
     text-decoration: none;
     transition: all 0.5s ease-out; }
@@ -90,6 +90,38 @@
 
 .nav-item:nth-child(4) {
   transition-delay: 0.4s; }
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  ul.menu-nav,
+  div.menu-profile {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu-nav.show,
+    div.menu-profile.show {
+      transform: translate(0, 0, 0); }
+  .menu-nav {
+    height: 75vh;
+    transform: translate(-100%, 0);
+    font-size: 24px; }
+  .menu-profile {
+    height: 25vh;
+    transform: translate(100%, 0); }
+    .menu-profile .portrait {
+      background: url("../img/Li.jpg");
+      background-size: cover;
+      width: 150px;
+      height: 150px; } }
+
+@media screen and (max-width: 500px) {
+  main#home h1 {
+    margin-top: 10vh; } }
 
 * {
   box-sizing: border-box; }

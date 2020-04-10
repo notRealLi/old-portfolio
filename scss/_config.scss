@@ -28,3 +28,26 @@ $background-opacity: 0.7;
     }
   }
 }
+
+// media query mixins
+@mixin mediaSM {
+  @media screen and (max-width: 500px) {
+    @content; // re-useable
+  }
+}
+
+@mixin mediaMD {
+  @media screen and (max-width: 768px) {
+    @content; // re-useable
+  }
+}
+@mixin mediaLG {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content; // re-useable
+  }
+}
+@mixin mediaXL {
+  @media screen and (min-width: 1171px) {
+    @content; // re-useable
+  }
+}
