@@ -1,6 +1,5 @@
 @import "config";
 @import "menu";
-@import "mobile";
 
 * {
   box-sizing: border-box;
@@ -25,7 +24,7 @@ h3 {
 
   // &: classes that are attacked to h1, h2 and h3
   &.lg-heading {
-    font-size: 6rem; // 6 * (default) 16px
+    font-size: 5rem; // 5 * (default) 16px
   }
 
   &.sm-heading {
@@ -53,7 +52,7 @@ header {
 // main
 main {
   padding: 4rem;
-  height: 100%;
+  min-height: calc(100vh - 60px);
 
   .icons {
     margin-top: 1rem;
@@ -76,3 +75,56 @@ main {
     }
   }
 }
+
+// about
+.about-info {
+  display: grid;
+  grid-template-areas:
+    "bioimage bio bio"
+    "job1 job2 job3";
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+
+  .bio-image {
+    grid-area: bioimage;
+    margin: auto; // match "bio" grids
+    border-radius: 50%;
+    border: $secondary-color 3px solid;
+    width: 250px;
+    height: 250px;
+  }
+
+  .bio {
+    grid-area: bio;
+    font-size: 1.5rem;
+  }
+
+  .job-1 {
+    grid-area: job1;
+  }
+
+  .job-2 {
+    grid-area: job2;
+  }
+
+  .job-3 {
+    grid-area: job3;
+  }
+
+  .job {
+    background: lighten($primary-color, 5);
+    padding: 0.5rem;
+    border-bottom: $secondary-color 5px solid;
+  }
+}
+
+// footer
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: darken($primary-color, 10);
+  color: darken(#fff, 50);
+  height: 60px;
+}
+
+@import "mobile"; // run last
