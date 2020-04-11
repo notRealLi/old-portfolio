@@ -1,9 +1,15 @@
 // wide screen
 @include mediaXL {
+  .projects {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 // laptops
 @include mediaLG {
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 // tablets
@@ -40,14 +46,16 @@
     transform: translate(100%, 0);
 
     .portrait {
-      background: url("../img/Li.jpg");
+      background: url("../img/Li-greyscaled.jpg");
       background-size: cover;
+      background-position: bottom 1px right 1px;
       width: 150px;
       height: 150px;
     }
   }
 
   .about-info {
+    margin-top: 30px;
     grid-template-areas:
       "bioimage"
       "bio"
@@ -56,11 +64,19 @@
       "job3";
     grid-template-columns: 1fr;
   }
+
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 // smartphones
 @include mediaSM {
   main#home h1 {
     margin-top: 10vh;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
   }
 }

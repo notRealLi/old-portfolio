@@ -1,7 +1,7 @@
 .menu-button {
   position: absolute;
   z-index: 3;
-  right: 35px;
+  right: 30px;
   top: 35px;
   cursor: pointer;
   @include easeOut();
@@ -86,9 +86,10 @@
     .portrait {
       width: 250px;
       height: 250px;
-      background: url("../img/Li.jpg");
+      background: url("../img/Li-greyscaled.jpg");
       opacity: 1; // this can overwrites parent opacity only coz parent uses rgba instead of opacity
       background-size: cover;
+      background-position: bottom 1px right 1px;
       border-radius: 50%;
       border: solid 3px $secondary-color;
     }

@@ -84,6 +84,7 @@ main {
     "job1 job2 job3";
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
+  margin-top: 30px;
 
   .bio-image {
     grid-area: bioimage;
@@ -92,6 +93,7 @@ main {
     border: $secondary-color 3px solid;
     width: 250px;
     height: 250px;
+    object-fit: cover;
   }
 
   .bio {
@@ -116,6 +118,47 @@ main {
     padding: 0.5rem;
     border-bottom: $secondary-color 5px solid;
   }
+}
+
+// projects
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.7rem;
+
+  img {
+    width: 100%;
+    border: 3px #fff solid;
+    filter: grayscale(100%);
+
+    &:hover {
+      opacity: 0.5;
+      border-color: $secondary-color;
+      filter: grayscale(0);
+      @include easeOut();
+    }
+  }
+}
+
+// buttons
+.button {
+  font-size: 2vw;
+  &:hover {
+    color: $secondary-color;
+    @include easeOut();
+  }
+}
+
+.button-demo {
+  margin-left: 8%;
+  float: left;
+  @extend .button;
+}
+
+.button-github {
+  margin-right: 8%;
+  float: right;
+  @extend .button;
 }
 
 // footer
