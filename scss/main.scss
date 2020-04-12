@@ -31,6 +31,7 @@ h3 {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
     background: rgba(lighten($primary-color, 2), 0.5);
+    width: fit-content;
   }
 }
 
@@ -81,7 +82,8 @@ main {
   display: grid;
   grid-template-areas:
     "bioimage bio bio"
-    "job1 job2 job3";
+    "job1 job2 job3"
+    "job4 job5 .";
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
   margin-top: 30px;
@@ -111,6 +113,13 @@ main {
 
   .job-3 {
     grid-area: job3;
+  }
+
+  .job-4 {
+    grid-area: job4;
+  }
+  .job-5 {
+    grid-area: job5;
   }
 
   .job {
