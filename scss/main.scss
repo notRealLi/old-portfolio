@@ -137,6 +137,7 @@ main {
 
   img {
     width: 100%;
+    height: auto;
     border: 3px #fff solid;
     filter: grayscale(100%);
 
@@ -171,22 +172,20 @@ main {
 
 // buttons
 .button {
-  font-size: 2vw;
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
   &:hover {
-    color: $secondary-color;
+    background-color: $secondary-color;
+    color: #000;
     @include easeOut();
   }
 }
 
-.button-demo {
-  margin-left: 8%;
-  float: left;
-  @extend .button;
-}
-
 .button-github {
-  margin-right: 8%;
-  float: right;
+  background: darken($primary-color, 20);
+  color: #fff;
   @extend .button;
 }
 
