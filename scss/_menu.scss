@@ -1,0 +1,134 @@
+.menu-button {
+  position: absolute;
+  z-index: 3;
+  right: 30px;
+  top: 35px;
+  cursor: pointer;
+  @include easeOut();
+
+  .button-line {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: #fff;
+    @include easeOut();
+  }
+
+  // rotation into x with menu lines
+  &.closed {
+    transform: rotate(180deg);
+
+    .button-line {
+      // line 1 (rotate)
+      &:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+      // line 2 (hide)
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      // line 3 (rotate)
+      &:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+      }
+    }
+  }
+}
+
+// menu overlay
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  visibility: hidden;
+
+  &.show {
+    visibility: visible;
+  }
+
+  // child class shorthand
+  &-profile,
+  &-nav {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  &-nav {
+    margin: 0;
+    padding: 0;
+    background: rgba(darken($primary-color, 5), 0.9);
+    list-style: none;
+    transform: translate(0, -100%);
+    @include easeOut();
+
+    &.show {
+      // slide in from top
+      transform: translate(0, 0);
+    }
+  }
+
+  &-profile {
+    background: rgba($primary-color, 0.9);
+    @include easeOut();
+    transform: translate(0, 100%);
+
+    &.show {
+      // slide in from bottom
+      transform: translate(0, 0);
+    }
+
+    .portrait {
+      width: 250px;
+      height: 250px;
+      background: url("../img/Li-greyscaled.jpg");
+      opacity: 1; // this can overwrites parent opacity only coz parent uses rgba instead of opacity
+      background-size: cover;
+      background-position: bottom 1px right 1px;
+      border-radius: 50%;
+      border: solid 3px $secondary-color;
+    }
+  }
+
+  .nav-item {
+    transform: translate(600px, 0);
+    @include easeOut();
+
+    &.show {
+      transform: translate(0, 0);
+    }
+
+    // a elements inside nav-items with "current" class
+    &.current > a {
+      color: $secondary-color;
+    }
+  }
+
+  .nav-link {
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    font-weight: 300;
+    color: #fff;
+    text-decoration: none;
+    @include easeOut();
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}
+
+// delay item slides
+@for $i from 1 through 4 {
+  .nav-item:nth-child(#{$i}) {
+    transition-delay: $i * 0.1s;
+  }
+}
