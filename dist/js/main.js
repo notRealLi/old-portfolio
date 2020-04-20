@@ -15,7 +15,7 @@ function toggleMenu() {
     menu.classList.add("show");
     menuProfile.classList.add("show");
     menuNav.classList.add("show");
-    navItems.forEach(item => {
+    navItems.forEach((item) => {
       item.classList.add("show");
     });
     showMenu = true;
@@ -24,7 +24,7 @@ function toggleMenu() {
     menu.classList.remove("show");
     menuProfile.classList.remove("show");
     menuNav.classList.remove("show");
-    navItems.forEach(item => {
+    navItems.forEach((item) => {
       item.classList.remove("show");
     });
     showMenu = false;
