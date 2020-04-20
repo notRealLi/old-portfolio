@@ -133,7 +133,7 @@ main {
 .projects {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 0.7rem;
+  grid-gap: 0.8rem;
 
   img {
     width: 100%;
@@ -147,6 +147,42 @@ main {
       filter: grayscale(0);
       @include easeOut();
     }
+  }
+
+  .item {
+    padding-top: 0.8rem;
+  }
+
+  .project-1 {
+    grid-area: project1;
+  }
+  .project-2 {
+    grid-area: project2;
+  }
+  .project-3 {
+    grid-area: project3;
+  }
+  .project-4 {
+    grid-area: project4;
+  }
+  .project-5 {
+    grid-area: project5;
+  }
+
+  .project-description-1 {
+    grid-area: project1desc;
+  }
+  .project-description-2 {
+    grid-area: project2desc;
+  }
+  .project-description-3 {
+    grid-area: project3desc;
+  }
+  .project-description-4 {
+    grid-area: project4desc;
+  }
+  .project-description-5 {
+    grid-area: project5desc;
   }
 }
 

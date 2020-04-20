@@ -2,6 +2,12 @@
 @include mediaXL {
   .projects {
     grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "project1 project1desc project1desc project1desc"
+      "project2 project2desc project2desc project2desc"
+      "project3 project3desc project3desc project3desc"
+      "project4 project4desc project4desc project4desc"
+      "project5 project5desc project5desc project5desc";
   }
 }
 
@@ -9,6 +15,12 @@
 @include mediaLG {
   .projects {
     grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "project1 project1desc project1desc"
+      "project2 project2desc project2desc"
+      "project3 project3desc project3desc"
+      "project4 project4desc project4desc"
+      "project5 project5desc project5desc";
   }
 }
 
@@ -73,6 +85,12 @@
 
   .projects {
     grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "project1 project1desc"
+      "project2 project2desc"
+      "project3 project3desc"
+      "project4 project4desc"
+      "project5 project5desc";
   }
 }
 
@@ -84,5 +102,21 @@
 
   .projects {
     grid-template-columns: 1fr;
+
+    grid-template-areas:
+      "project1"
+      "project1desc"
+      "project2"
+      "project2desc"
+      "project3"
+      "project3desc"
+      "project4"
+      "project4desc"
+      "project5"
+      "project5desc";
+  }
+
+  .project-1-description {
+    visibility: hidden;
   }
 }
