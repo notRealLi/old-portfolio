@@ -199,15 +199,14 @@ main {
   .projects img {
     width: 100%;
     height: auto;
-    border: 3px #fff solid;
-    filter: grayscale(100%); }
+    border: 3px #fff solid; }
     .projects img:hover {
       opacity: 0.5;
       border-color: #eece1a;
       filter: grayscale(0);
       transition: all 0.5s ease-out; }
   .projects .item {
-    padding-top: 0.8rem; }
+    padding-top: 0.5rem; }
   .projects .project-1 {
     grid-area: project1; }
   .projects .project-2 {
@@ -228,6 +227,8 @@ main {
     grid-area: project4desc; }
   .projects .project-description-5 {
     grid-area: project5desc; }
+  .projects .text-secondary {
+    line-height: 1.2; }
 
 #contact {
   align-items: center;
@@ -245,17 +246,21 @@ main {
     padding: 1.5rem 2.5rem;
     margin-bottom: 3rem; }
 
-.button, .button-github {
+.button, .button-github, .button-kaggle {
   display: block;
   padding: 0.5rem 1rem;
   border: 0;
   margin-bottom: 0.3rem; }
-  .button:hover, .button-github:hover {
+  .button:hover, .button-github:hover, .button-kaggle:hover {
     background-color: #eece1a;
     color: #000;
     transition: all 0.5s ease-out; }
 
 .button-github {
+  background: #0b0a0b;
+  color: #fff; }
+
+.button-kaggle {
   background: #0b0a0b;
   color: #fff; }
 
@@ -311,14 +316,9 @@ main {
     grid-template-areas: "bioimage" "bio" "job1" "job2" "job3" "job4" "job5";
     grid-template-columns: 1fr; }
   .projects {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "project1 project1desc" "project2 project2desc" "project3 project3desc" "project4 project4desc" "project5 project5desc"; } }
+    grid-template-columns: 1fr;
+    grid-template-areas: "project1" "project1desc" "project2" "project2desc" "project3" "project3desc" "project4" "project4desc" "project5" "project5desc"; } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
-    margin-top: 10vh; }
-  .projects {
-    grid-template-columns: 1fr;
-    grid-template-areas: "project1" "project1desc" "project2" "project2desc" "project3" "project3desc" "project4" "project4desc" "project5" "project5desc"; }
-  .project-1-description {
-    visibility: hidden; } }
+    margin-top: 10vh; } }
