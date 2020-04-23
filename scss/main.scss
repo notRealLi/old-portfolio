@@ -139,7 +139,7 @@ main {
     width: 100%;
     height: auto;
     border: 3px #fff solid;
-    filter: grayscale(100%);
+    //filter: grayscale(100%);
 
     &:hover {
       opacity: 0.5;
@@ -150,7 +150,7 @@ main {
   }
 
   .item {
-    padding-top: 0.8rem;
+    padding-top: 0.5rem;
   }
 
   .project-1 {
@@ -183,6 +183,10 @@ main {
   }
   .project-description-5 {
     grid-area: project5desc;
+  }
+
+  .text-secondary {
+    line-height: 1.2;
   }
 }
 
@@ -220,6 +224,12 @@ main {
 }
 
 .button-github {
+  background: darken($primary-color, 20);
+  color: #fff;
+  @extend .button;
+}
+
+.button-kaggle {
   background: darken($primary-color, 20);
   color: #fff;
   @extend .button;

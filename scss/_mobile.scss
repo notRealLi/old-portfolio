@@ -84,23 +84,6 @@
   }
 
   .projects {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas:
-      "project1 project1desc"
-      "project2 project2desc"
-      "project3 project3desc"
-      "project4 project4desc"
-      "project5 project5desc";
-  }
-}
-
-// smartphones
-@include mediaSM {
-  main#home h1 {
-    margin-top: 10vh;
-  }
-
-  .projects {
     grid-template-columns: 1fr;
 
     grid-template-areas:
@@ -115,8 +98,11 @@
       "project5"
       "project5desc";
   }
+}
 
-  .project-1-description {
-    visibility: hidden;
+// smartphones
+@include mediaSM {
+  main#home h1 {
+    margin-top: 10vh;
   }
 }
