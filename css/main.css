@@ -199,7 +199,8 @@ main {
   .projects img {
     width: 100%;
     height: auto;
-    border: 3px #fff solid; }
+    border: 3px #fff solid;
+    filter: grayscale(100%); }
     .projects img:hover {
       opacity: 0.5;
       border-color: #eece1a;
