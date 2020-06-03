@@ -4,6 +4,7 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas:
       "project1 project1desc project1desc project1desc"
+      "project6 project6desc project6desc project6desc"
       "project2 project2desc project2desc project2desc"
       "project3 project3desc project3desc project3desc"
       "project4 project4desc project4desc project4desc"
@@ -17,6 +18,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
       "project1 project1desc project1desc"
+      "project6 project6desc project6desc"
       "project2 project2desc project2desc"
       "project3 project3desc project3desc"
       "project4 project4desc project4desc"
@@ -89,6 +91,8 @@
     grid-template-areas:
       "project1"
       "project1desc"
+      "project6"
+      "project6desc"
       "project2"
       "project2desc"
       "project3"
