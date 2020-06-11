@@ -220,6 +220,8 @@ main {
     grid-area: project5; }
   .projects .project-6 {
     grid-area: project6; }
+  .projects .project-7 {
+    grid-area: project7; }
   .projects .project-description-1 {
     grid-area: project1desc; }
   .projects .project-description-2 {
@@ -232,6 +234,8 @@ main {
     grid-area: project5desc; }
   .projects .project-description-6 {
     grid-area: project6desc; }
+  .projects .project-description-7 {
+    grid-area: project7desc; }
   .projects .text-secondary {
     line-height: 1.2; }
 
@@ -279,12 +283,12 @@ main {
 @media screen and (min-width: 1171px) {
   .projects {
     grid-template-columns: repeat(4, 1fr);
-    grid-template-areas: "project1 project1desc project1desc project1desc" "project6 project6desc project6desc project6desc" "project2 project2desc project2desc project2desc" "project3 project3desc project3desc project3desc" "project4 project4desc project4desc project4desc" "project5 project5desc project5desc project5desc"; } }
+    grid-template-areas: "project6 project6desc project6desc project6desc" "project7 project7desc project7desc project7desc" "project2 project2desc project2desc project2desc" "project3 project3desc project3desc project3desc" "project4 project4desc project4desc project4desc" "project1 project1desc project1desc project1desc" "project5 project5desc project5desc project5desc"; } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .projects {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "project1 project1desc project1desc" "project6 project6desc project6desc" "project2 project2desc project2desc" "project3 project3desc project3desc" "project4 project4desc project4desc" "project5 project5desc project5desc"; } }
+    grid-template-areas: "project6 project6desc project6desc" "project7 project7desc project7desc" "project2 project2desc project2desc" "project3 project3desc project3desc" "project4 project4desc project4desc" "project1 project1desc project1desc" "project5 project5desc project5desc"; } }
 
 @media screen and (max-width: 768px) {
   main {
@@ -322,7 +326,7 @@ main {
     grid-template-columns: 1fr; }
   .projects {
     grid-template-columns: 1fr;
-    grid-template-areas: "project1" "project1desc" "project6" "project6desc" "project2" "project2desc" "project3" "project3desc" "project4" "project4desc" "project5" "project5desc"; } }
+    grid-template-areas: "project6" "project6desc" "project7" "project7desc" "project2" "project2desc" "project3" "project3desc" "project4" "project4desc" "project1" "project1desc" "project5" "project5desc"; } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
